@@ -9,7 +9,7 @@ namespace gamestore.Controllers
 {
     public class ProductoController:Controller
     {
-                private readonly ApplicationDbContext _context;
+        private readonly ApplicationDbContext _context;
 
         public ProductoController(ApplicationDbContext context)
         {

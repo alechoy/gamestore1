@@ -15,7 +15,7 @@ namespace gamestore.Models
         [Column("categoria")]
         public string Categoria { get; set; }
         [Column("precio")]
-        public string Precio {get; set;}
+        public decimal Precio {get; set;}
         [Column("descuento")]
         public string Descuento {get; set; }   
     }
