@@ -1,0 +1,42 @@
+@model gamestore.Models.Producto
+@{
+    ViewData["Title"] = "Producto";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+<div class="text-center">
+    <h1 class="display-4">Registro de juegos</h1>
+
+    <form asp-controller="Producto" asp-action="Create">
+
+        <input type="hidden" asp-for="Id" />
+
+        <label asp-for="Name" class="form-label"></label>
+        <input asp-for="Name" class="form-control form-control-sm" type="text" placeholder="Escribe un nombre del juego" aria-label=".form-control-sm" />
+
+        <div>
+            <select name="Categoria" class="form-select" aria-label="Default select example">
+                <option selected disabled>Seleccione categoría</option>
+                <option value="Fantasia">Fantasía</option>
+                <option value="Accion">Acción</option>
+                <option value="Historia">Historia</option>
+                <option value="Mentales">Mentales</option>
+            </select>
+        </div>
+
+        <label asp-for="Precio" class="control-label"></label>
+        <input asp-for="Precio" class="form-control" />
+
+        <label asp-for="Descuento" class="control-label"></label>
+        <input asp-for="Descuento" class="form-control" />
+
+        <div class="form-group">
+            <button type="submit" class="btn btn-primary">Registrar</button> 
+        </div>              
+    </form>
+    <h1>@ViewData["Message"]</h1>
+    <div>
+        <a asp-action="Index">Regresar a la lista</a>
+    </div>
+</div>
